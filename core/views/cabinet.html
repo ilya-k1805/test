@@ -1,0 +1,18 @@
+{% extends "templates/main.html" %}
+
+{% block content %}
+<div id='cabinet'>
+	<div id='userdata'></div>
+	<button id='edit'>Редактировать</button>
+	<div id='form' class='none'></div>
+	<div id='overlay' class='none'></div>
+</div>
+{% endblock %}
+{% block footer %}
+	{{ parent() }}
+	<script>
+	var Cabinet = new Cabinet({
+		elem: document.getElementById('cabinet')
+	});
+	</script>
+{% endblock %}

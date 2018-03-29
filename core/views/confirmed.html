@@ -1,0 +1,11 @@
+{% extends "templates/main.html" %}
+
+{% block content %}
+	{% if errors is defined %}
+		{% for error in errors %}
+			<p>{{error}}</p>
+		{% endfor %}
+	{% else %}
+		<p>Email успешно подтвержден</p>
+	{% endif %}
+{% endblock %}

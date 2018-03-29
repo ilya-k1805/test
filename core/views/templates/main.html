@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+<head>
+	{% block head %}
+	    <title>{{title}}</title>
+	    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+	    <link rel="stylesheet" href="/assets/css/main.css" />
+	{% endblock %}
+</head>
+<body>
+	<header>
+		<ul id="menu">
+			<li><a href="/">Главная</a></li>
+			{% if login is defined %}
+				<li><a href="/cabinet">Кабинет</a></li>
+				 <li><a href="/auth/logout">Выход</a></li>
+			{% else %}
+			<li><a href="/auth/registration">Регистрация</a></li>
+			<li><a href="/auth/login">Логин</a></li>
+			{% endif %}
+		</ul>
+	</header>
+	
+	<div id="content">
+	    {% block content %}
+
+	    {% endblock %}
+	</div>
+	{% block footer %}
+	<footer>
+		<div class='container'>
+			Тестовое задание 2018
+		</div>
+	</footer>
+	<script src='/assets/js/main.js'></script>
+
+	{% endblock %}
+</body>
+</html>

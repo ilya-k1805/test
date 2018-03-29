@@ -1,0 +1,28 @@
+{% extends "templates/main.html" %}
+
+{% block content %}
+<form id='login' method='post'>
+	<p>
+		<input name='login' type='text' placeholder='Логин'{% if login is defined %} value='{{login}}'{% endif %} />
+	</p>
+	<p>
+		<input name='password' type='text' placeholder='Пароль' />
+	</p>
+	<input name='submit_button' type='submit' value='Войти' />
+	<div class='errors'>
+		{% if errors is defined %}
+			{% for error in errors %}
+				<p>{{error}}</p>
+			{% endfor %}
+		{% endif %}
+	</div>
+</form>
+{% endblock %}
+{% block footer %}
+	{{ parent() }}
+	<script>
+	var Login = new Login({
+		elem: document.getElementById('login')
+	});
+	</script>
+{% endblock %}

@@ -1,0 +1,23 @@
+
+<form id='registration' method='post'>
+	<p>
+		<input name='login' type='text' placeholder='Логин'{% if login is defined %} value='{{login}}'{% endif %} />
+	</p>
+	<p>
+		<input name='password' type='text' placeholder='Пароль' />
+	</p>
+	<p>
+		<input name='password2' type='text' placeholder='Повторите пароль' />
+	</p>
+	<p>
+		<input name='email' type='text' placeholder='Email'{% if email is defined %} value='{{email}}'{% endif %} />
+	</p>
+	<div class='errors'>
+		{% if errors is defined %}
+			{% for error in errors %}
+				<p>{{error}}</p>
+			{% endfor %}
+		{% endif %}
+	</div>
+	<input name='submit_button' type='submit' value='Отправить' />
+</form>

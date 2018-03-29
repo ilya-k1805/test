@@ -1,0 +1,12 @@
+{% extends "templates/main.html" %}
+
+{% block content %}
+<h1>Тестовое задание</h1>
+
+{% if login is defined %}
+	<li><a href="/cabinet">Кабинет</a></li>
+{% else %}
+	<p><a href='/auth/login'>Логин</a></p>
+	<p><a href='/auth/registration'>Регистрация</a></p>
+{% endif %}
+{% endblock %}

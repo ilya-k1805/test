@@ -1,0 +1,13 @@
+{% extends "templates/main.html" %}
+
+{% block content %}
+	{{ include('registration_form.html') }}
+{% endblock %}
+{% block footer %}
+	{{ parent() }}
+	<script>
+	var Registration = new Registration({
+		elem: document.getElementById('registration')
+	});
+	</script>
+{% endblock %}
