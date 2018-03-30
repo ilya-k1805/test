@@ -11,7 +11,7 @@
 	<header>
 		<ul id="menu">
 			<li><a href="/">Главная</a></li>
-			{% if login is defined %}
+			{% if user is defined %}
 				<li><a href="/cabinet">Кабинет</a></li>
 				 <li><a href="/auth/logout">Выход</a></li>
 			{% else %}

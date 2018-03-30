@@ -13,7 +13,7 @@ class Cabinet extends Controller {
 		
 		$login = $_SESSION['login'];
 		$data['title'] = 'Личный кабинет';
-		$data['login'] = $_SESSION['login'];
+		$data['user'] = $_SESSION['login'];
 
 		echo $this->render('cabinet.html', $data);
 
