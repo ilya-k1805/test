@@ -16,10 +16,6 @@ class Controller {
 		$this->core = $core;
 	}
 
-	public function redirect($url = '/') {
-		header("Location: {$url}");
-		exit();
-	}
 
 	public function render($template, array $data = array()) {
 		$output = '';

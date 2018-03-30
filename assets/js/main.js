@@ -180,6 +180,5 @@ Cabinet.prototype.updateUserData = function(){
 	} else {
 		var data = JSON.parse(xhr.responseText);
 		this.cabinet.querySelector('#userdata').innerHTML = '<p>Логин: ' + data.login + '</p><p>Пароль: ' + data.email + '</p>';
-		console.log(JSON.parse(xhr.responseText))
 	}
 }
